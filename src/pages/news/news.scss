@@ -1,0 +1,131 @@
+.news-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .news {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 0;
+
+    h3 {
+      font-weight: 400;
+      color: #8a8a8a;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 38px
+    }
+
+    .info-news {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 120px 0;
+
+      .item {
+        width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        h2 {
+          font-size: 22px;
+          font-weight: 900;
+          color: #42434b;
+        }
+
+        span {
+          font-style: italic;
+          font-size: 21px;
+          color: #42434b;
+        }
+      }
+
+      .item1 {
+        text-align: right;
+      }
+
+      .item2 {
+        text-align: left;
+      }
+    }
+  }
+
+  .facility-container {
+    width: 100%;
+    background-color: #38c4c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      color: white;
+      font-weight: 300;
+      margin: 35px 0;
+    }
+
+    h1 {
+      color: white;
+      font-weight: 800;
+    }
+
+    .info {
+      width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 60px 0;
+
+      .item {
+        width: 600px;
+        height: 500px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .item-img {
+        background-color: #f7db4b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item-text {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .title-text {
+          width: 500px;
+
+          h1 {
+            font-size: 35px;
+            font-weight: 800;
+            color: #42434b;
+          }
+
+          p {
+            font-size: 20px;
+            margin: 15px 0;
+          }
+
+          Button {
+            margin: 15px 0;
+            color: #ffe3ec;
+            //background-color: #42434b;
+          }
+        }
+      }
+    }
+  }
+}

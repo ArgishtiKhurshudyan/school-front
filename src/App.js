@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar/Navbar";
+import './app.scss'
+import Footer from "./components/footer/Footer";
+import {ToastContainer} from "react-toastify";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import React, {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {getLoginStart} from "./redux/user/actions";
+import publicRoutes from "./routes/publicRoutes";
+import privateRoutes from "./routes/privateRoutes";
+import Sidebar from "./components/sidebar/Sidebar";
+import Public from "./public";
 
 function App() {
+  const token = localStorage.getItem('access_token')
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    if (token) {
+      dispatch(getLoginStart())
+    }
+  }, [token, dispatch])
+
+  const {isLoginSuccess} = useSelector((state) => state.user)
+
+  useEffect(() => {
+    if (isLoginSuccess) {
+      window.location.replace("/dashboard")
+    }
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={token && "App"}>
+      <BrowserRouter>
+        <ToastContainer/>
+          {!token && <Public/>}
+          {token &&  <Sidebar/>}
+        <Routes>
+          <Route path="/">
+            {
+              token && privateRoutes.map((rout) => (
+                <Route exact path={rout.path} element={rout.component} key={rout.id}/>
+              ))
+            }
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
 export default App;
+
+
+// !token ? publicRoutes.map((rout) => (
+//   <Route exact path={rout.path} element={rout.component} key={rout.id}/>
+// ))

@@ -1,0 +1,246 @@
+.about-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .title-about {
+    width: 1200px;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 23px;
+      font-weight: 400;
+      color: #8a8a8a;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 48px;
+    }
+
+    .items {
+      width: 100%;
+      margin: 50px 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      .item-img {
+        img {
+          width: 500px;
+          height: 650px;
+        }
+      }
+
+      .item-infos {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .top-item {
+          width: 100%;
+          height: 300px;
+          display: flex;
+          justify-content: space-evenly;
+
+          .item {
+            width: 300px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+
+            h2 {
+              color: silver;
+              font-weight: 300;
+              font-size: 28px;
+            }
+
+            span {
+              font-style: italic;
+              color: #8a8a8a;
+            }
+
+            img {
+              position: absolute;
+              right: 15px;
+              top: 10px;
+            }
+
+            .btn {
+              position: absolute;
+              bottom: 2px;
+              color: red;
+            }
+          }
+
+          .blue {
+            background: #ebfcfc;
+          }
+
+          .pink {
+            background: #fff2fa;
+          }
+
+        }
+
+        .bottom-item {
+          width: 100%;
+          height: 300px;
+          display: flex;
+          justify-content: space-evenly;
+
+          .img-itm {
+            width: 300px;
+            height: inherit;
+            background: red;
+
+            img {
+              width: inherit;
+              height: inherit;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .service-container- {
+    width: inherit;
+    height: 700px;
+    background-color: #feca02;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      color: white;
+      font-weight: 300;
+    }
+
+    h1 {
+      color: white;
+      font-weight: 700;
+    }
+
+    .service-item {
+      width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .item-srv {
+        margin: 15px 0;
+        width: 290px;
+        height: 400px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50px;
+        }
+
+        h1 {
+          font-size: 20px;
+          margin: 40px 0;
+          color: silver;
+          font-weight: 500;
+        }
+
+        span {
+          text-align: center;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .enroll-child-container {
+    width: 100%;
+    height: 500px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .title {
+      width: 1200px;
+
+      h1 {
+        font-weight: 800;
+        font-size: 50px;
+        color: #42434b;
+      }
+    }
+
+    .text-item {
+      width: 1200px;
+      margin: 40px 0;
+      display: flex;
+      justify-content: flex-start;
+
+      .item {
+        width: 500px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .innovative-info-container {
+    width: 100%;
+    height: 650px;
+    background-color: #38c4c1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .items {
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      .item {
+        width: 380px;
+        //height: 500px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+          width: 360px;
+          color: #42434b;
+          font-weight: 600;
+          font-size: 38px;
+          //text-align: center;
+        }
+p {
+  width: 360px;
+  font-size: 22px;
+}
+        img {
+          width: 380px;
+          height: 450px;
+        }
+      }
+    }
+
+  }
+}

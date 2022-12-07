@@ -1,0 +1,15 @@
+.footer-container {
+  width: 100%;
+  height: 300px;
+  background: #11293c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logos-websites {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+  }
+}

@@ -1,0 +1,67 @@
+.room-container {
+  width: 100%;
+  height: 100vh;
+  margin-left: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .room-section {
+    width: 1200px;
+    background-color: #f8f7ff;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .items {
+      width: 80%;
+
+      .rooms-name {
+        width: 150px;
+        height: 50px;
+        background-color: white;
+        float: left;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.1s ease;
+        position: relative;
+
+        .delete {
+          width: 15px;
+          height: 15px;
+          border-radius: 50px;
+          background-color: white;
+          border: 1px solid black;
+          position: absolute;
+          cursor: pointer;
+          right: -9px;
+          top: -8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+
+          &:hover {
+            color: red;
+            transition: 1s ease;
+          }
+        }
+
+        h1 {
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .show-btn-create {
+    position: absolute;
+    right: 100px;
+    top: 25px
+  }
+}
